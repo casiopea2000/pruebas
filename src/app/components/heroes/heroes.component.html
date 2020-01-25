@@ -1,0 +1,33 @@
+<p>heroes works!</p>
+
+<!--
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="assets/recursos/batman.png" alt="Cassrd image">
+    <div class="card-body">
+      <h4 class="card-title">John Doeeee</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="assets/recursos/batman.png" alt="Cassrd image">
+    <div class="card-body">
+      <h4 class="card-title">John Doeeee</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+-->
+
+  <div class="card" style="width:400px" *ngFor="let heroe of heroes; let i = index ">
+    <img class="card-img-top" [src]="heroe.img" alt="Cassrd image">
+    <div class="card-body">
+      <h4>el indice es {{i}}</h4>
+      <h4 class="card-title">John Doeeee</h4>
+      <p class="card-text">Some example text.</p>
+      <!--<a [routerLink]="['/heroe',i]" class="btn btn-primary">ver ficha</a>-->
+      <a [routerLink]="['/heroe']" class="btn btn-primary">ver ficha</a>
+      <a [routerLink]="['/heroe', i]" class="btn btn-primary">DETALLE</a>
+    </div>
+  </div>
